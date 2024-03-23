@@ -1,0 +1,81 @@
+
+*{
+    margin : 0;
+    padding : 0;
+}
+
+body{
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+nav{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav *{
+    display : inline-block;
+    font-size: 2rem;
+    padding : 0 2rem 0 0;
+    color : rgb(95, 136, 143);
+}
+
+.asking_tool {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.respond {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+section{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 80px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 80%;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+body {
+    background-color: rgb(249, 222, 167);
+}
+
+footer {
+    background-color: gray;
+    padding : 1rem
+}

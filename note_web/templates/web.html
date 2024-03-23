@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문사이트</title>
+    <link rel="stylesheet" href="static\web.css">
+    <script src="https://kit.fontawesome.com/9b10a59654.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <header>
+            QnA
+        </header>
+        <li><a href="">질문하기</a></li>
+    </nav>
+    <main>
+        <section>
+            <div class = "asking_tool" id = "asking_tool">
+            <!-- add_task 함수의 post 방식에 따라, 사용자가 입력한 정보(task)를 전달하는 <form> 태그-->
+                <form action="{{ url_for('add_ask') }}" method="post">
+                    <input type="text" name="ask" placeholder="질문을 추가해주세요" required>
+                    <button type="submit">Add question</button>
+                </form>
+            </div>
+        
+            <div class = "respond" id = "respond">
+                <ul>
+                    <!-- tasks 속 인자를 받아오는 for문 -->
+                    {% for ask in tasks %}
+                    <li>
+                        <div class="box">
+                            <h>Q.</h>
+                            
+                            <!-- 작업명 출력 -->
+                            {{ ask[1] }}
+                            <!-- 현재 문서와 app.py의 delete_task를 연결하는 <a> 태그 -->
+                            <a href="{{ url_for('delete_ask', ask_id=ask[0]) }}">삭제</a>
+
+                        </div>
+                    </li>
+                    {% endfor %}
+                    <!-- for문이 끝났음을 알리는 코드 -->
+                    <!-- <li><div class="box">테스트</div></li> -->
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Designed by BeomJun <i class="fa-brands fa-square-instagram"></i></p>
+        </footer>
+
+    </main>
+    
+    
+</body>
+</html>
